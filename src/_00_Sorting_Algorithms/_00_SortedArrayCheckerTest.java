@@ -1,13 +1,14 @@
 package _00_Sorting_Algorithms;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class _00_SortedArrayCheckerTest {
+
+public class _00_SortedArrayCheckerTest {
 
 	@Test
-	void testIntArray() {
+	public void testIntArray() {
 		int[] unsorted = {3, 2, 9, 3, 1, 0};
 		int[] sorted = {0, 1, 2, 2, 3, 4};
 		
@@ -16,7 +17,7 @@ class _00_SortedArrayCheckerTest {
 	}
 	
 	@Test
-	void testDoubleArray() {
+	public void testDoubleArray() {
 		double[] unsorted = {3, 2, 9, 3, 1, 0};
 		double[] sorted = {0, 1, 2, 2, 3, 4};
 		
@@ -25,7 +26,7 @@ class _00_SortedArrayCheckerTest {
 	}
 	
 	@Test
-	void charDoubleArray() {
+	public void charDoubleArray() {
 		char[] unsorted = {'c', 'F', 'p', 'A'};
 		char[] sorted = {'a', 'b', 'c', 'd', 'e'};
 		
@@ -34,7 +35,7 @@ class _00_SortedArrayCheckerTest {
 	}
 	
 	@Test
-	void stringDoubleArray() {
+	public void stringDoubleArray() {
 		String[] unsorted = {"carrot", "pineapple", "mango", "pear"};
 		String[] sorted = {"apple", "banana", "carrot", "grape"};
 		
