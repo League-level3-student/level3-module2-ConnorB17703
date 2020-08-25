@@ -1,5 +1,5 @@
 package _00_Sorting_Algorithms;
-//ask for help to fix entire program
+
 public class HeapSorter extends Sorter {
 
 	public HeapSorter() {
@@ -19,12 +19,12 @@ public class HeapSorter extends Sorter {
 		//9. make a for loop that starts half way between
 		//   0 and n and counts down until it is less than 0.
 		//   Inside this for loop, call the heapSort method with n and i
-        for(int i = (n-0)/2; i<0; i--){
+        for(int i = (n-0)/2; i>=0; i--){
         	heapSort(array, n, i, display);
         }
         //10. make a for loop that starts at n-1 
         //    and counts down until it is less than 0.
-        for(int y = n-1; y<0; y--){
+        for(int y = n-1; y>=0; y--){
         	int temp = array[0];
         	array[0] = array[y];
         	array[y] = temp;
@@ -37,7 +37,7 @@ public class HeapSorter extends Sorter {
 	}
 	
 	public void heapSort(int[] array, int n, int i, SortingVisualizer display) {
-		display.updateDisplay();
+		
 		//2. create an integer called largest and set it equal to i
 		int largest =i;
 		//3. create an integer called l and set it equal to 2 * i + 1
@@ -48,7 +48,7 @@ public class HeapSorter extends Sorter {
         //   and array element at l is greater than array element at largest
         //   then set largest equal to l
      	if(l<n && array[l]>array[largest]){
-     		largest = 1;
+    		largest = l;
      	}
         //6. if r is less than n 
         //   and array element at r is greater than array element at largest
