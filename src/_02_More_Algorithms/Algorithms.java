@@ -62,19 +62,52 @@ public class Algorithms {
 	public static List<Double> sortScores(List<Double> results){
 		Collections.sort(results);
 		return results;
+//		for(int i = 0; i<results.size()-1;i++){
+//		if(results.get(i)>results.get(i+1)){
+//			double temp = results.get(i);
+//			results.set(i,results.get(i+1));
+//			results.set(i+1,temp);
+//		}
+//	}
+//	
+//	return results;
+//
+	}
+
+	public static List<String> sortDNA(List<String> unsortedSequences) {
+		String temp = "";
+		
+		for(int y = 0; y<unsortedSequences.size();y++){
+			for(int i =y+1; i<unsortedSequences.size();i++){
+				if(unsortedSequences.get(y).length()>unsortedSequences.get(i).length()){
+					temp = unsortedSequences.get(y);
+					unsortedSequences.set(y,unsortedSequences.get(i));
+					unsortedSequences.set(i, temp);
+				}
+			}
+		}
+		return unsortedSequences;
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		for(int i =0; i<words.size(); i++){
+			for(int j = i+1; j <words.size(); j++){
+				if(words.get(i).compareTo(words.get(j)) > 0){
+					String temp  = words.get(i);
+					words.set(i, words.get(j));
+					words.set(j, temp);
+				}
+			}
+		}
+		return words;
 	}
 	
+	
+	
+	
+	
 }
-//		for(int i = 0; i<results.size()-1;i++){
-//			if(results.get(i)>results.get(i+1)){
-//				double temp = results.get(i);
-//				results.set(i,results.get(i+1));
-//				results.set(i+1,temp);
-//			}
-//		}
-//		
-//		return results;
-//	
+
 
 
 
