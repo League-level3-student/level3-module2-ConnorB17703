@@ -16,7 +16,7 @@ public class RecursionMath {
 		
 		//4. else return number + recursionMultiplication(number, times-1)
 		
-		return recursiveMultiplication(number, times-1);
+		return number + recursiveMultiplication(number, times-1);
 		}
 	}
 	
@@ -26,23 +26,25 @@ public class RecursionMath {
 		if(numberToDevideBy > number){
 			return number;
 		}else{
-			return recursiveDivision(number, numberToDevideBy);
+			return  recursiveDivision(number-1 , numberToDevideBy);
 		}
 		
 	}
 	
 	//8. Try this one on your own!
 	public static int recursivePower(int number, int power) {
-		return 0;
+		if(power == 0){
+			return 1;
+		}else{
 		
-		///***WORK THIS METHOD***
-		
+		return number * recursivePower(number, power-1);
+		}
 	}
 	
 	
 	
 	@Test
-	void testMultiplication() {
+	public void testMultiplication() {
 		assertEquals(12, recursiveMultiplication(3, 4));
 		//1  Add more JUnit tests like the one above to test your method
 		
@@ -50,16 +52,18 @@ public class RecursionMath {
 	
 	
 	@Test
-	void testDivision() {
+	public void testDivision() {
 		//5  Add JUnit tests to test your method
-		
+		assertEquals(3, recursiveDivision(12, 4));
+
 	}
 	
 	
 	@Test 
-	void testPower() {
+	public void testPower() {
 		//7  Add JUnit tests to test your method
-	
+		assertEquals(16, recursivePower(4, 2));
+
 	}
 	
 }
